@@ -331,6 +331,15 @@
 // While testing locally keep it as "http://localhost:5000"
 // ═══════════════════════════════════════════════
 const BACKEND_URL = "http://localhost:5000";
+  fetch("https:hackstorm.onrender.com", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({ image: "data" })
+})
+.then(res => res.json())
+.then(data => console.log(data))
 
 let selectedFile = null;
 let lastResult   = null;
